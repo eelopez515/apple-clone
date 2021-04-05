@@ -31,7 +31,7 @@ function NavBar({ history }) {
         Support
       </p>
       <p className="navBar__content">Search</p>
-      <p className="navBar__content">Cart</p>
+      <p className="navBar__content">Bag</p>
     </div>
   );
 }
