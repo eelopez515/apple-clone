@@ -30,9 +30,8 @@ function NavBar({ history }) {
       <p onClick={() => history.push('/support')} className="navBar__content">
         Support
       </p>
-      <p onClick={() => history.push('/cart')} className="navBar__content">
-        Cart
-      </p>
+      <p className="navBar__content">Search</p>
+      <p className="navBar__content">Cart</p>
     </div>
   );
 }
