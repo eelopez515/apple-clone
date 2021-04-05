@@ -5,33 +5,41 @@
     height: 100%
     width: 100%
 
-    .homepage__covid__info
-        height: 45px
-        width: 100%
+    .homepage__header
         display: flex
+        flex-direction: column
         position: absolute
-        justify-content: center
-        align-items: center
-        background-color: #0171E2
+        height: 90px
+        width: 100%
+        position: absolute
 
-        p
-            color: white
-            font-size: 14px
-            cursor: pointer
+        .homepage__covid__info
+            height: 45px
+            width: 100%
+            display: flex
+            position: absolute
+            justify-content: center
+            align-items: center
+            background-color: #0171E2
+
+            p
+                color: white
+                font-size: 14px
+                cursor: pointer
 
             &:hover
                 text-decoration: underline
                 text-decoration-color: white
 
-    .homepage__shop__online
-        top: 45px
-        height: 45px
-        width: 100%
-        display: flex
-        position: absolute
-        justify-content: center
-        align-items: center
-        background-color: #F5F5F7
+        .homepage__shop__online
+            top: 45px
+            height: 45px
+            width: 100%
+            display: flex
+            position: absolute
+            justify-content: center
+            align-items: center
+            background-color: #F5F5F7
 
         .shop__online
             color: #0171E2
@@ -40,3 +48,10 @@
             &:hover
                 text-decoration: underline
                 text-decoration-color: #0171E2
+
+    .homepage__contents
+        display: flex
+        flex-direction: column
+        position: relative
+        top: 90px
+        width: 100%
