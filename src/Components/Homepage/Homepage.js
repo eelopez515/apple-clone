@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import './Homepage.sass';
 // Components
 import MainEvent from '../MainEvent/MainEvent';
+import SubEvent from '../SubEvent/SubEvent';
 
 function Homepage({ history }) {
   return (
@@ -29,6 +30,14 @@ function Homepage({ history }) {
         <MainEvent />
         <MainEvent />
         <MainEvent />
+      </div>
+      <div className="homepage__subEvents">
+        <SubEvent />
+        <SubEvent />
+        <SubEvent />
+        <SubEvent />
+        <SubEvent />
+        <SubEvent />
       </div>
     </div>
   );
