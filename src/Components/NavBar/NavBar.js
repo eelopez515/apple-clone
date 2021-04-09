@@ -7,7 +7,7 @@ function NavBar({ history }) {
   return (
     <div className="navBar">
       <p onClick={() => history.push('/')} className="navBar__content">
-        Logo
+        <span className="navBar__logo"></span>
       </p>
       <p onClick={() => history.push('/mac')} className="navBar__content">
         Mac

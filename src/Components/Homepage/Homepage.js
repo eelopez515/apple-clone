@@ -27,9 +27,24 @@ function Homepage({ history }) {
         </div>
       </div>
       <div className="homepage__contents">
-        <MainEvent />
-        <MainEvent />
-        <MainEvent />
+        <MainEvent
+          title="Arcade"
+          phrase="Calling all players."
+          learnMore="Learn More >"
+          nextStep="Try is free"
+        />
+        <MainEvent
+          title="iPhone 12"
+          phrase="Blast past fast."
+          learnMore="Learn More >"
+          nextStep="Buy >"
+        />
+        <MainEvent
+          title="iPhone 12 Pro"
+          phrase="It's a leap year."
+          learnMore="Learn More >"
+          nextStep="Buy >"
+        />
       </div>
       <div className="homepage__subEvents">
         <SubEvent />
