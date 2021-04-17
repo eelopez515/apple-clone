@@ -4,7 +4,40 @@
     height: 500px
     width: 45vw
     justify-content: center
-    align-items: center
+    text-align: center
     border: 1px solid black
     cursor: pointer
     margin: 5px 15px 15px 15px
+
+    &:hover
+        transform: scale(1.04)
+        box-shadow: 5px 3px 5px rgba(0,0,0,0.8)
+
+    .subEvent__content
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 40px
+
+        h1
+            margin-bottom: 10px
+            font-size: 35px
+
+        .subtitle
+            font-size: 20px
+            margin-bottom: 10px
+            width: 310px
+            margin-bottom: 10px
+
+    .subEvent__links
+        display: flex
+        justify-content: space-around
+        width: 300px
+
+        .link
+            font-size: 18px
+            color: #0171E2
+
+            &:hover
+                text-decoration: underline
+                text
