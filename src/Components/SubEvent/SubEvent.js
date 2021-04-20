@@ -1,7 +1,7 @@
 import React from 'react';
 import './SubEvent.sass';
 
-function SubEvent({ title, subtitle, learnMore, otherLink }) {
+function SubEvent({ title, subtitle, learnMore, otherLink, image }) {
   return (
     <div className="subEvent">
       <div className="subEvent__content">
@@ -9,8 +9,9 @@ function SubEvent({ title, subtitle, learnMore, otherLink }) {
         <p className="subtitle">{subtitle}</p>
         <div className="subEvent__links">
           <p className="link">{learnMore}</p>
-          <p className="link">{otherLink}</p>
+          {otherLink ? <p className="link">{otherLink}</p> : ''}
         </div>
+        <img src={image} alt="" />
       </div>
     </div>
   );

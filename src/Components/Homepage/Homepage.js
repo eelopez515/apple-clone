@@ -4,8 +4,9 @@ import './Homepage.sass';
 // Components
 import MainEvent from '../MainEvent/MainEvent';
 import SubEvent from '../SubEvent/SubEvent';
-//image import test
-import iphone12 from '../../Assets/Homepage/iphone12.png';
+// Data
+import { mainEventData } from '../../Assets/Data/Data';
+import { subEventData } from '../../Assets/Data/Data';
 
 function Homepage({ history }) {
   return (
@@ -29,61 +30,43 @@ function Homepage({ history }) {
         </div>
       </div>
       <div className="homepage__contents">
-        <MainEvent
-          title="iPhone 12"
-          phrase="Blast past fast."
-          learnMore="Learn More >"
-          nextStep="Buy >"
-          image={iphone12}
-        />
-        <MainEvent
-          title="iPhone 12 Pro"
-          phrase="It's a leap year."
-          learnMore="Learn More >"
-          nextStep="Buy >"
-        />
-        <MainEvent
-          title="Watch"
-          phrase="The future of health is on your wrist."
-          learnMore="Learn More >"
-          nextStep="Buy >"
-        />
+        {mainEventData.map(
+          ({
+            id,
+            title,
+            phrase,
+            learnMore,
+            nextStep,
+            image,
+            backgroundColor,
+          }) => (
+            <MainEvent
+              key={id}
+              id={id}
+              title={title}
+              phrase={phrase}
+              learnMore={learnMore}
+              nextStep={nextStep}
+              image={image}
+              backgroundColor={backgroundColor}
+            />
+          )
+        )}
       </div>
       <div className="homepage__subEvents">
-        <SubEvent
-          title="Apple Event"
-          subtitle="Watch on April 20 at 10:00 a.m. PDT."
-          learnMore="Learn More >"
-        />
-        <SubEvent
-          title="Fitness+"
-          subtitle="A new fitness experience for everyone. Powered by Apple Watch."
-          learnMore="Learn More >"
-          otherLink="Try it free"
-        />
-        <SubEvent
-          title="Arcade"
-          subtitle="Simon's Cat - Story Time. Play Now."
-          learnMore="Learn More >"
-          otherLink="Buy"
-        />
-        <SubEvent
-          title="iPad Air"
-          subtitle="Powerful. Colorful. Wonderful"
-          learnMore="Learn More >"
-          otherLink="Buy"
-        />
-        <SubEvent
-          title="Card"
-          subtitle="Get 3% Daily Cash Back on purchases from Apple when you use Apple Card."
-          learnMore="Learn More >"
-        />
-        <SubEvent
-          title="tv+"
-          subtitle="The Year Earth Changed"
-          learnMore="Learn More >"
-          otherLink="Watch now"
-        />
+        {subEventData.map(
+          ({ id, title, subtitle, learnMore, otherLink, image }) => (
+            <SubEvent
+              key={id}
+              id={id}
+              title={title}
+              subtitle={subtitle}
+              learnMore={learnMore}
+              otherLink={otherLink}
+              image={image}
+            />
+          )
+        )}
       </div>
     </div>
   );

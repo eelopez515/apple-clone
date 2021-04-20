@@ -1,10 +1,22 @@
 import React from 'react';
 import './MainEvent.sass';
 
-function MainEvents({ title, phrase, learnMore, nextStep, image }) {
+function MainEvents({
+  id,
+  title,
+  phrase,
+  learnMore,
+  nextStep,
+  image,
+  backgroundColor,
+}) {
   return (
     <div className="mainEvent">
-      <div className="mainEvent__contents">
+      <div
+        className={`mainEvent__contents ${
+          backgroundColor === 'black' ? 'blackBackground' : ''
+        }`}
+      >
         <h1>{title}</h1>
         <p className="phrase">{phrase}</p>
         <div className="mainEvent__links">
@@ -12,7 +24,11 @@ function MainEvents({ title, phrase, learnMore, nextStep, image }) {
           <p className="link">{nextStep}</p>
         </div>
         <div className="mainEvent__image">
-          <img className="image" src={image} alt="" />
+          <img
+            className={`image ${id === 3 ? 'watchImage' : ''}`}
+            src={image}
+            alt=""
+          />
         </div>
       </div>
     </div>
